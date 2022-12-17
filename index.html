@@ -1,75 +1,56 @@
-<html manifest="offlineCache.manifest">
-<head>
-<title>PS4 Jailbreak</title>
-<meta charset="utf-8"/>
-<style>
-.button {
-  background-color: #003263;  
-  border-radius: 5px;
-  color: white;
-  padding: .5em;
-  text-decoration: none;
-  height:100%;
-  display:inline-table;
-  font-family: system-ui;
+<!DOCTYPE html>
+<html><head>
+<title>PS4 Exploit Host by GamerHack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="msgs">PS4 Exploit Host by GamerHack</h1>
+<hr>
+<br>
+<div id="main-section">
+<h1 style="font-size:18px;color:yellow;">Select Your Firmware</h1>
+
+<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v3.0 for Firmware 6.72'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 6.72 FW v3.0 </button></a>
+<a href="702/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v1.4 for Firmware 7.02'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 7.02 FW v1.4 </button></a>
+<a href="75x/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v1.5 for Firmwares 7.50 - 7.55'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 7.50 - 7.55 FW v1.5 </button></a>
+<br>
+<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Auto GoldHen Host for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 9.00 FW Auto-GoldHen </button></a>
+<a href="900v2/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v2.5 with Manual Exploitation for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 9.00 FW v2.5 </button></a>
+<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v3.0 with Automatic Exploitation for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> 9.00 FW v3.0 </button></a>
+<br>
+<a href="ps5/index.html"><button class="btn" onmouseover="msgs.innerHTML='Enable Debug Settings for PS5 on Firmwares 3.XX - 4.XX'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> PS5 Debug Settings </button></a>
+<a href="restore/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> Restore Host </button></a>
+<a href="nobd/index.html"><button class="btn btn2" onmouseover="msgs.innerHTML='PS4 NoBD Host by GamerHack (To Update the FW on Consoles with Broken Blu-ray Drive)'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> Mira NoBD </button></a>
+
+<br>
+<a href="ps4-pkg/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host v3.0 for Firmware 6.72'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> Download Package Files For PS4</button></a>
+
+<!-- <br>
+<button class="btn btn-web" onmouseover="msgs.innerHTML='If you like my work you can support me with a donation.'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'" onclick=load_crypto() style="margin-top:100px;margin-bottom: 176px;width: 468px;"> For Donations (Only in Cryptocurrencies) </button>
+<br> -->
+<h1 style="color:yellow;">Designed by<a href="https://www.instagram.com/_prasanth__/" style="color: #f31414;margin-left: 10px;">@Prasanth595</a><a style="color: white;margin-left: 10px;">A special thanks to all the developers involved in the scene.</a></h1>
+</div>
+<!-- <div id="crypto-section">
+<h1 style="font-size:18px;color:yellow;">For Transfers in Bitcoin (BTC) you can scan the QR Code.</h1>
+<img src="btc.jpg" width="160" height="160">
+<br>
+<h1 style="font-size:18px;">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</h1>
+<br>
+<h1 style="font-size:18px;color:yellow;">For Transfers in Ethereum (ETH) you can scan the QR Code.</h1>
+<img src="eth.jpg" width="160" height="160">
+<h1 style="font-size:18px;">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</h1>
+<button class="btn btn-web" onclick=back()> Return </button>
+</div> -->
+<!-- <script>
+function load_crypto(){
+document.getElementById("crypto-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
 }
 
-.button:focus,
-.button:hover {
-  background-color: #007bff;
-  color: White;
+function back(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("crypto-section").style.display = "none";
 }
-
-.titlehead {
-  background-color: #003263;  
-  border-radius: 5px;
-  color: white;
-  padding: .5em;
-  text-decoration: none;
-  text-align: center;
-  margin-top: -10px;
-  margin-bottom: -10px;
-  font-family: system-ui;
-}
-
-.titlehead:focus,
-.titlehead:hover {
-  background-color: #007bff;
-  color: White;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("ps4.jpg");
-
-  
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-</style></head>
-<body class="bg">
-<script>
-	if (localStorage.truefirm == null) {
-		if(navigator.userAgent.indexOf("6.72")>=0){localStorage.truefirm="index672.html";window.location.href="index672.html";}else if(navigator.userAgent.indexOf("7.0")>=0){localStorage.truefirm="index702.html";window.location.href = "index702.html";}else if(navigator.userAgent.indexOf("7.5")>=0){localStorage.truefirm="75XV2/index.html";window.location.href = "75XV2/index.html";}else if(navigator.userAgent.indexOf("9.00")>=0){localStorage.truefirm="900/index.html";window.location.href = "900/index.html";}
-	}else{
-		window.location.href = localStorage.truefirm;
-	}
-</script>
-<h1 id="progress" class="titlehead">PS4 Jailbreak And PS4 Games</h1><hr><br>
-<div>
-<table align="center" style="width:600px;margin-top:30px;">
-<tr>
-<td align="center" colspan="2" >
-<a href="index672.html" class="button" style="width:29%">6.72</a>
-<a href="index702.html" class="button" style="width:29%">7.02</a><br><br/>
-<a href="75XV2/index.html" class="button" style="width:29%">7.5X</a>
-<a href="900/index.html" class="button" style="width:29%">9.00</a><br><br/>
-<a href="ps4-pkg/index.html" class="button" style="width:29%">Download Games</a>
-</td>
-</tr>
-</table></div>
+</script> -->
 </body>
 </html>

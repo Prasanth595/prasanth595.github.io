@@ -1,207 +1,422 @@
-<html manifest="offlineCache.manifest">
-	<style>
-		.button {
-		  background-color: #003263;  
-		  border-radius: 5px;
-		  color: white;
-		  padding: .5em;
-		  text-decoration: none;
-		  height:100%;
-		  display:inline-table;
-		  font-family: system-ui;
-		}
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
+<title>PS4 7.50 - 7.55 Host v1.5 by GamerHack</title>
+<link rel="stylesheet" href="../style.css">
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+document.cookie = 'kex=1';
+</script>
+</head>
+<body>
+<div id="main-section">
+<h1 id=msgs>PS4 7.50 - 7.55 Host v1.5 by GamerHack</h1>
+<hr>
+<br>
+<h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
+<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
+<br>
+<h1 style="font-size:20px;text-align:center;">Payloads</h1>
+<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
+<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
+<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
+<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
+<br>
+<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
+<br>
+<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
+<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick=load_ebrowser()> Enable Browser </button>
+<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
+<br>
+<button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
+<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()> Disable ASLR </button>
+<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> RIF Renamer </button>
+<button class="btn btn-main" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
+<br>
+<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
+<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_exitidu()> Exit IDU </button>
+<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
+<br>
+<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_mods()> Games Mods </button>
+<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
+<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
+</div>
+<div id="mods-section">
+<h1 id=msgs-mods>Games Mods</h1>
+<hr>
+<br>
+<h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick=load_Lamance()> Lamance v0.9 - 1.38 </button>
+<br>
+<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> RDR2 v1.00 </button>
+<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> RDR2 v1.13 </button>
+<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> RDR2 v1.19 </button>
+<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> RDR2 v1.24 </button>
+<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> RDR2 v1.29 </button>
+<br>
+<button class="btn btn-web" onclick=close_section() style="margin-bottom: 310px"> Return </button>
+</div>
+<h1 style="color:yellow;">Designed by<a href="https://www.instagram.com/_prasanth__/" style="color: #f31414;margin-left: 10px;">@Prasanth595</a><a style="color: white;margin-left: 10px;">A special thanks to all the developers involved in the scene.</a></h1>
+<script><script>
+function load_mods(){
+document.getElementById("mods-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+function close_section(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("mods-section").style.display = "none";
+}
+function mainpayload1(){
+document.getElementById("msgs").innerHTML = "GoldHEN v2.2.2 for All Firmwares 7.5x (Includes Temporary Fix for CE-30391-6)";
+}
+function mainpayload2(){
+document.getElementById("msgs").innerHTML = "MIRA for All Firmwares 7.5x";
+}
+function mainpayload3(){
+document.getElementById("msgs").innerHTML = "Inject a Payload Using the IP of the console and Port 9021";
+}
+function todex(){
+document.getElementById("msgs").innerHTML = "Enable Some Debugging Functions Available on TestKit";
+}
+function dumper(){
+document.getElementById("msgs").innerHTML = "Dump Games to USB Drive";
+}
+function ftp(){
+document.getElementById("msgs").innerHTML = "Access this console Through FTP (Be careful what you do)";
+}
+function app2usb(){
+document.getElementById("msgs").innerHTML = "Transfer Games / Apps to USB Drive in exFAT";
+}
+function enableUpdates(){
+document.getElementById("msgs").innerHTML = "Enable System Updates";
+}
+function disableUpdates(){
+document.getElementById("msgs").innerHTML = "Disable System Updates";
+}
+function dbackup(){
+document.getElementById("msgs").innerHTML = "Creates a Backup of the Console Database and Your User on a USB Drive";
+}
+function dbrestore(){
+document.getElementById("msgs").innerHTML = "Restore Database Backup from USB Drive";
+}
+function historyBlocker(){
+document.getElementById("msgs").innerHTML = "Disable Browser History, it will only show Frequently used Pages once you open";
+}
+function ebrowser(){
+document.getElementById("msgs").innerHTML = "Enable The PS4 Browser";
+}
+function kernelDump(){
+document.getElementById("msgs").innerHTML = "Dump a Conole Kernel to USB Drive";
+}
+function kernelClock(){
+document.getElementById("msgs").innerHTML = "Change the Time for the Console Kernel Clock";
+}
+function ps4debug(){
+document.getElementById("msgs").innerHTML = "Activate Your User Account Offline";
+}
+function disbaslr(){
+document.getElementById("msgs").innerHTML = "Disables the ASLR (Address space layout randomization)";
+}
+function rifrenamer(){
+document.getElementById("msgs").innerHTML = "Renames 'fake' RIFs to 'free' RIFs";
+}
+function fanthreshold(){
+document.getElementById("msgs").innerHTML = "Modify PS4 FAN Speed";
+}
+function webact(){
+document.getElementById("msgs").innerHTML = "Activate Your User Account from the Console Browser";
+}
+function exitidu(){
+document.getElementById("msgs").innerHTML = "Disable IDU Mode, if you have activated it by mistake";
+}
+function linux1gb(){
+document.getElementById("msgs").innerHTML = "Load Linux with 1GB VRAM";
+}
+function linux3gb(){
+document.getElementById("msgs").innerHTML = "Load Linux with 3GB VRAM";
+}
+function mods(){
+document.getElementById("msgs").innerHTML = "Games Mods";
+}
+function orbistoolbox(){
+document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
+}
+function webrte(){
+document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through the PS4 Trainer Website";
+}
+function ps4trainer(){
+document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
+}
+function Lamance(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)";
+}
+function RedDeadMod1(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.8";
+}
+function RedDeadMod2(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.8";
+}
+function RedDeadMod3(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.8";
+}
+function RedDeadMod4(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8";
+}
+function RedDeadMod5(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8";
+}
+function pagetitle(){
+document.getElementById("msgs").innerHTML = "PS4 7.50 - 7.55 FW Host v1.5 by GamerHack";
+document.getElementById("msgs-mods").innerHTML = "Games Mods";
+}
 
-		.button:focus,
-		.button:hover {
-		  background-color: #007bff;
-		  color: White;
-		}
+for(var i=40; i<=79; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
 
-		.titlehead {
-		  background-color: #003263;  
-		  border-radius: 5px;
-		  color: white;
-		  padding: .5em;
-		  text-decoration: none;
-		  text-align: center;
-		  margin-top: -10px;
-		  margin-bottom: -10px;
-		  font-family: system-ui;
-		}
+function load_goldhen222(){
 
-		.titlehead:focus,
-		.titlehead:hover {
-		  background-color: #007bff;
-		  color: White;
-		}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'goldhen2.2.2.html';
+        link.click();
+}
+function load_mira75x(){
 
-		.bg {
-		  /* The image used */
-		  background-image: url("ps4.jpg");
-		  font-family: system-ui;
-		  /* Center and scale the image nicely */
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'mira-75x.html';
+        link.click();
+}
+function load_binloader(){
 
-		#myProgress {
-		  border: 5px solid #FFFFFF;
-		  border-radius: 5px;
-		  background-color: #ddd;
-		  height: 45px;
-		  position: absolute;
-		  top:0;
-		  bottom: 250;
-		  left: 150;
-		  right: 150;
-		  margin: auto;
-		}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html';
+        link.click();
+}
+function load_todex(){
 
-		#myBar {
-		  width: 0%;
-		  height: 40px;
-		  background-color: #4CAF50;
-		  text-align: center;
-		  line-height: 30px;
-		  color: white;
-		  font-size: 35px;
-		  padding-top: 5px;
-		}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=todex.js';
+        link.click();
+}
+function load_dumper(){
 
-	</style>
-	<head>
-		<title>PS4 Jailbreak 7.5X</title>
-	</head>
-	<body onload="go()" class="bg">
-		<script>
-			if(window.applicationCache.status==2){localStorage.is75XCached=true;}
-			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";localStorage.is75XCached=false;};
-			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";localStorage.is75XCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page to Run the Exploit!!"; }, 1500);};
-		</script>
-		<script>
-			var width = 0;
-			function frame1() {
-				var elem = document.getElementById("myBar");
-				var i=0;
-				var id = setInterval(fra, 10);
-				function fra(){
-				  if(i<10 && width<100){
-					  width++;
-					  elem.style.width = width + "%";
-					  elem.innerHTML = width  + "%";
-				  } i++;
-				}
-			}
-		</script>
-		<script>
-		function print(){}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=app-dumper.js';
+        link.click();
+}
+function load_ftp(){
 
-		var scriptCode = '';
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=ftp.js';
+        link.click();
+}
+function load_app2usb(){
 
-		function preloadScripts(lst)
-		{	
-			scriptCode = '';
-			for(var i = 0; i < lst.length; i++)
-			{
-				var xhr = new XMLHttpRequest();
-				xhr.open('GET', lst[i], false);
-				xhr.send('');
-				scriptCode += xhr.responseText + '\n';
-			}
-		}
-		
-		function done(){
-			setTimeout(function(){document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X";}, 1000);
-			document.getElementById("myProgress").remove();
-			document.getElementById('load').innerHTML='<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="exploit_old" class="button" onclick="toggle_payload(\'exploit_old\'); return false" style="width:43%">Old Exploit</a>&nbsp;'+
-					'<a href="#" id="exploit" class="button" onclick="toggle_payload(\'exploit\'); return false" style="width:43%">New Exploit</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2" >'+
-					'<a href="#" id="mira750" class="button" onclick="toggle_payload(\'mira750\'); return false" style="width:29%">MIRA 7.50</a>&nbsp;'+
-					'<a href="#" id="mira751" class="button" onclick="toggle_payload(\'mira751\'); return false" style="width:29%">MIRA 7.51</a>&nbsp;'+
-					'<a href="#" id="mira755" class="button" onclick="toggle_payload(\'mira755\'); return false" style="width:29%">MIRA 7.55</a>&nbsp;'+
-					'</td>'+
-					'</tr>'+
-					'<tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td colspan="2" align="center"><hr><br></td>'+
-					'</tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="app2usb" class="button" onclick="toggle_payload(\'app2usb\'); return false" style="width:44.5%">App2USB</a>&nbsp;'+
-					'<a href="#" id="binloader" class="button" onclick="toggle_payload(\'binloader\'); return false" style="width:44.5%">Bin Loader</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="disableupdates" class="button" onclick="toggle_payload(\'disableupdates\'); return false" style="width:44.5%">Disable Updates</a>&nbsp;'+
-					'<a href="#" id="enableupdates" class="button" onclick="toggle_payload(\'enableupdates\'); return false" style="width:44.5%">Enable Updates</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="dumper" class="button" onclick="toggle_payload(\'dumper\'); return false" style="width:29%">Dumper</a>&nbsp;'+
-					'<a href="#" id="ftp" class="button" onclick="toggle_payload(\'ftp\'); return false" style="width:29%">FTP</a>&nbsp;'+
-					'<a href="#" id="enablebrowser" class="button" onclick="toggle_payload(\'enablebrowser\'); return false" style="width:29%">Enable Browser</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2">'+
-					'<a href="#" id="backup" class="button" onclick="toggle_payload(\'backup\'); return false" style="width:29%">Backup</a>&nbsp;'+
-					'<a href="#" id="restore" class="button" onclick="toggle_payload(\'restore\'); return false" style="width:29%">Restore</a>&nbsp;'+
-					'<a href="#" id="historyblocker" class="button" onclick="toggle_payload(\'historyblocker\'); return false" style="width:29%">History Blocker</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="renamer" class="button" onclick="toggle_payload(\'rifrenamer\'); return false" style="width:29%">Rif Renamer</a>&nbsp;'+
-					'<a href="#" id="todex" class="button" onclick="toggle_payload(\'todex\'); return false" style="width:29%">To-Dex</a>&nbsp;'+
-					'<a href="#" id="disableaslr" class="button" onclick="toggle_payload(\'disableaslr\'); return false" style="width:29%">Disable ASLR</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>'+
-					'<tr>'+
-					'<td align="center" colspan="2"><a href="#" id="kerneldumper" class="button" onclick="toggle_payload(\'kerneldumper\'); return false" style="width:29%">Kernel Dumper</a>&nbsp;'+
-					'<a href="#" id="kernelclock" class="button" onclick="toggle_payload(\'kernelclock\'); return false" style="width:29%">Kernel Clock</a>&nbsp;'+
-					'<a href="#" id="fancontrol" class="button" onclick="toggle_payload(\'fancontrol\'); return false" style="width:29%">Fan Control</a>&nbsp;</td>'+
-					'</tr><tr><td><br/></td></tr>';
-		}
-		
-		window.midExploit = function()
-		{
-			preloadScripts(['common/exploit.js']);
-		}
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=app2usb.js';
+        link.click();
+}
+function load_enablebUpdates(){
 
-		window.postExploit = function()
-		{
-			setTimeout(function()
-			{	
-				eval.call(window, scriptCode);
-				done();
-			}, 100);
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=enable-updates.js';
+        link.click();
+}
+function load_disableUpdates(){
 
-		};
-		
-		window.postPayload = function()
-		{
-			setTimeout(function()
-			{	
-				eval.call(window, scriptCode);
-				//done();
-			}, 100);
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=disable-updates.js';
+        link.click();
+}
+function load_dbackup(){
 
-		};
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=backup.js';
+        link.click();
+}
+function load_dbrestore(){
 
-		</script>
-		<script src="./webkit/utils.js"></script>
-		<script src="./webkit/int64.js"></script>
-		<script src="./webkit/ps4.js"></script>
-		<h1 id="progress" class="titlehead">Loading.. Please Wait !!</h1><hr><br>
-		<button style="opacity:0" id="input1" onfocus="handle2()"></button>
-		<button style="opacity:0" id="input2"></button>
-		<button style="opacity:0" id="input3" onfocus="handle2()"></button>
-		<select style="opacity:0" id="select1">
-			<option value="value1">Value1</option>
-		</select>
-		<h1 id="myProgress">
-		  <div id="myBar">0%</div>
-		</h1>
-		<table id="load" align="center" style="width:600px;margin-top:30px;">
-		</table>
-	</body>
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=restore.js';
+        link.click();
+}
+function load_historyBlocker(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=history-blocker.js';
+        link.click();
+}
+function load_ebrowser(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=enable-browser.js';
+        link.click();
+}
+function load_kernelDump(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=kernel-dumper.js';
+        link.click();
+}
+function load_kernelClock(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=kernel-clock.js';
+        link.click();
+}
+function load_ps4debug(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=ps4debug.js';
+        link.click();
+}
+function load_disbAslr(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=disable-aslr.js';
+        link.click();
+}
+function load_rifRen(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=rif-renamer.js';
+        link.click();
+}
+function load_fanthreshold(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=fanThreshold.js';localStorage.setItem('fanthreshold', tempC.value);
+        link.click();
+}
+function load_webact(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'web-activator.html';
+        link.click();
+}
+function load_exitidu(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=idu.js';
+        link.click();
+}
+function load_linux1gb(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=linux-1gb.js';
+        link.click();
+}
+function load_linux3gb(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=linux-3gb.js';
+        link.click();
+}
+function load_toolbox(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=Orbis-Toolbox-755.js';
+        link.click();
+}
+function load_webrte(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=webrte.js';
+        link.click();
+}
+function load_ps4trainer(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'http://ps4trainer.com/Trainer/index.html';
+		link.target = "blank";
+        link.click();
+}
+function load_Lamance(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=Lamance-v0.9-1.38.js';
+        link.click();
+}
+function load_Oysters100(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.8-v1.00.js';
+        link.click();
+}
+function load_Oysters113(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.8-v1.13.js';
+        link.click();
+}
+function load_Oysters119(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.8-v1.19.js';
+        link.click();
+}
+function load_Oysters124(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.8-v1.24.js';
+        link.click();
+}
+function load_Oysters129(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.8-v1.29.js';
+        link.click();
+}
+
+var jailbreak_start_date = localStorage.getItem("jailbreak_start_date");
+if (jailbreak_start_date !== null) {
+  localStorage.removeItem("jailbreak_start_date");
+}
+</script>
+</body>
 </html>
